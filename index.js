@@ -11,19 +11,19 @@ const getUsers = async () => {
         const zip = user.address.zipcode
         const zipOnly = zip.slice(0, 5)
         const companyAddress = street.concat(' , ', city, ' , ', zipOnly)
-        const phoneOnly = user.phone.replace(/\D/g, '')
-        const phone = phoneOnly.slice(1, 11)
+        //   const phoneOnly = user.phone.replace(/\D/g, '')
+        //   const phone = phoneOnly.slice(0, 10)
         const userObj = {
           first_name: user.name.split(' ')[0],
           last_name: user.name.split(' ')[1],
           company_name: user.company.name,
           company_full_address: companyAddress,
           website: user.website,
-          phone: phone,
+          phone: 2083567880,
         }
         const postObj = {
           userid: 'thety.everton@gmail.com',
-          password: ' 25dbc6337f9d420097bff22cf8ba558d',
+          password: '25dbc6337f9d420097bff22cf8ba558d',
           outputtype: 'Json',
           users: [userObj],
         }
